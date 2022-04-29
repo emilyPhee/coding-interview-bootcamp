@@ -18,6 +18,18 @@ function chunk(array, size) {
     }
     chunked[chunked.length - 1].push(c);
   });
+
+  // solution from Udemy
+  // for (let element of array) {
+  //   const last = chunked[chunked.length - 1];
+  // last will have reference to the chunked array and able to change/add value
+
+  //   if (!last || last.length === size) {
+  //     chunked.push([element]);
+  //   } else {
+  //     last.push(element);
+  //   }
+  // }
   return chunked;
 }
 
