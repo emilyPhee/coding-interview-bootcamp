@@ -17,6 +17,32 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  const poundChar = '#';
+  const empty = ' ';
+  let emptyCount = n - 1;
+
+  for (let i = 1; i <= n; i++) {
+    console.log(poundChar.repeat(i) + empty.repeat(emptyCount));
+    emptyCount--;
+  }
+}
 
 module.exports = steps;
+
+// solution from Udemy
+// function steps(n) {
+//   for (let row = 0; row < n; row++) {
+//     let stair = '';
+
+//     for (let column = 0; column < n; column++) {
+//       if (column <= row) {
+//         stair += '#';
+//       } else {
+//         stair += ' ';
+//       }
+//     }
+
+//     console.log(stair);
+//   }
+// }
