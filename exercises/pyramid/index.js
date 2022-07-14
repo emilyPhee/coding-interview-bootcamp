@@ -14,6 +14,29 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+//   pyramid(4)
+//       '   #   '
+//       '  ###  '
+//       ' ##### '
+//       '#######'
+
+function pyramid(n) {
+  const empty = ' ';
+  const pound = '#';
+  let emptyCount = n - 1;
+  let poundCount = 1;
+
+  for (let i = 0; i < n; i++) {
+    let result =
+      empty.repeat(emptyCount) +
+      pound.repeat(poundCount) +
+      empty.repeat(emptyCount);
+
+    emptyCount--;
+    poundCount += 2;
+
+    console.log(result);
+  }
+}
 
 module.exports = pyramid;
